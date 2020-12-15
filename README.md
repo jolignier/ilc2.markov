@@ -18,30 +18,40 @@
 ## Analyze IADT functions
 Hereafter, for each classes give function to be tested. Remember that all functions does not have to be tested, some code can be checked by a simple inspection or an analyse, another code can be validated by definition (rules, etc) the others function can be tecsted by unit tests, integration tests or validation tests (IADT: Inspect, Analyse, Define, Test). 
 
+| Validation Mode |   Why ? When ?  |
+| :-------------: | :-------------: |
+| I: Inspect | No test needed, just a simple static test (visual) on a subset of classes (commentaries, indentation, etc.) |
+| A: Analyze | Not easy to test but the algorithm is well know and can be check by a static analyze |
+| D: Def/Dem | You can Demonstrate the function or by Definition the function needs not test (generate code, call functions, etc.)|
+| T: Test | the function can be easly test |
+
 ### Class app.MarkovApp
 
 | Function      |     I A D T     |        Comment |
 | :------------ | :-------------: | :------------- |
-| main |  |  | 
-| readFileAsString |  |  | 
+| main | D | basic main | 
+| readFileAsString | I | Simple text parser | 
 
 ### Class markov.MarkovChain
 
 | Function      |     I A D T     |        Comment |
 | :------------ | :-------------: | :------------- |
-| MarkovChain  |  |  |
-| generateMarkov  |  |  |
-| learn  |  |  |
-| setRgen  |  |  |
+| MarkovChain  | D | constructor |
+| generateMarkov  | T |  |
+| learn  | T |  |
+| setRgen  | D | basic setter |
 
 ### Class markov.MarkovData
 
 | Function      |     I A D T     |        Comment |
 | :------------ | :-------------: | :------------- |
-| read  |  |  |
-| learnWord  |  |  |
-| renforceWord  |  |  |
-| Etc.  |  |  |
+| read  | T |  |
+| learnWord  | D | uses map inner function |
+| renforceWord  | T |  |
+| getLearnedWord  | D | uses map inner function |
+| containsKeyWord  | D | uses map inner function |
+| getKeyWord  | I | getter |
+| KeyWordSize  | I | getter |
 
 ## Functions to test now
 
